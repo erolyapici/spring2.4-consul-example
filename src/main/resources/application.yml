@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: appname
+  config:
+    import: optional:consul:localhost:8500/config/appname_test
+  cloud:
+    config:
+      discovery:
+        enabled: false
+    consul:
+      service-registry:
+        enabled: false
+      discovery:
+        enabled: false
+      config:
+        enabled: false
+server:
+  servlet:
+    context-path: /appname
