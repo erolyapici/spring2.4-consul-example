@@ -1,0 +1,24 @@
+server:
+  servlet:
+    context-path: /demo
+management:
+  endpoint:
+    metrics:
+      enabled: false
+spring:
+  application:
+    name: demo
+  cloud:
+    consul:
+      host: consul
+      port: 8500
+      enabled: true
+      config:
+        prefix: config
+        default-context: application
+        profile-separator: _
+        watch:
+          enabled: false
+        fail-fast: true
+    discovery:
+      enabled: false
